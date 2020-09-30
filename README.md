@@ -7,7 +7,14 @@ function makeslides(){
     cd $out
 }
 ```
-changing the path to slidemaker accordingly.
+changing the path to slidemaker accordingly. To initialise a new folder: 
+```
+makeslides 2020_30_09_Example
+```
+
+This will simply copy the contents of this git repo to an empty directory. 
+There are two files, a .sh script and a .md file. 
+The .sh script is used to set some environment variables used in the slide outputs, as well as control the downloading/copying of images. 
 
 In compile.sh there are various variables to be set:
 
