@@ -5,7 +5,7 @@ TAG=OutputName
 
 title="Example Title"
 author="Michael"
-date="22nd September 2020"
+date="xxnd October 2020"
 sed -i "s/title:.*/title: ${title}/;s/author:.*/author: ${author}/;s/date:.*/date: ${date}/" markdown_beamer_example.md
 
 mkdir -p images 

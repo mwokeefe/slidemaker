@@ -1,7 +1,7 @@
 ---
 title: Example Title
 author: Michael
-date: 22nd September 2020
+date: xxnd October 2020
 output: 
 beamer_presentation:
 slide_level: 2
