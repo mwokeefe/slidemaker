@@ -10,6 +10,7 @@ function makeslides(){
 changing the path to slidemaker accordingly.
 
 In compile.sh there are various variables to be set:
+
     - DATE   = date in year_day_month format (used to date the pdf filename)
     - TAG    = a memorable tag for the pdf filename
     - title  = title to appear in slides
