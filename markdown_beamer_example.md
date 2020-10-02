@@ -33,3 +33,9 @@ header-includes:
 
 ## Introduction
 - Fist slide
+
+## Second Slide {.t}
+- Sometimes you will have a series of slides with figures on that you want to flick between
+- Adding text one one slide, but not the other, will shift the figure placement of this slide but not the others
+    - Meaning you can't nicely flick between slides
+- To set the alignment to the top of the slide, simply add ```{.t}``` to the slide title
