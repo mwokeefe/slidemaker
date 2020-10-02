@@ -1,4 +1,9 @@
 # HowTo
+Dependencies: 
+```
+sudo apt-get install pandoc texlive-latex-extra
+```
+
 Add the following to your ~/.bashrc
 ```
 function makeslides(){
