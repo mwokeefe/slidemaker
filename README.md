@@ -8,7 +8,7 @@ Add the following to your ~/.bashrc
 ```
 function makeslides(){
     local out=$1
-    cp -r ~/Work/Presentations/slidemaker $out
+    cp -r ~/Work/Presentations/slidemaker/src/ $out
     cd $out
 }
 ```
