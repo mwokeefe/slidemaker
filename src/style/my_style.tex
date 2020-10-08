@@ -1,0 +1,49 @@
+% Include packages
+\usepackage{braket}
+\usepackage{listings}
+\usepackage{tabto}
+\usepackage{tikz}
+
+% Define colours
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+\definecolor{alizarin}{rgb}{0.82, 0.1, 0.26}
+\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}
+\definecolor{junglegreen}{rgb}{0.16, 0.67, 0.53}
+\definecolor{junebud}{rgb}{0.74, 0.85, 0.34}
+\definecolor{cobalt}{rgb}{0.0, 0.28, 0.67}
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.55}
+\definecolor{davygrey}{rgb}{0.33, 0.33, 0.33}
+\definecolor{trolleygrey}{rgb}{0.5, 0.5, 0.5}
+\definecolor{steelblue}{rgb}{0.27, 0.51, 0.71}
+
+% Set list text size/colours
+\setbeamertemplate{itemize/enumerate body begin}{\normalsize}
+\setbeamertemplate{itemize/enumerate subbody begin}{\scriptsize}
+\setbeamertemplate{itemize/enumerate subsubbody begin}{\fontsize{8}{11}\selectfont}
+\setbeamercolor{itemize/enumerate body}{fg=black}
+\setbeamercolor{itemize/enumerate subbody}{fg=trolleygrey}
+\setbeamercolor{itemize/enumerate subsubbody}{fg=steelblue}
+
+% Set list bullet colours
+%\setbeamercolor{item}{fg=darkspringgreen}
+%\setbeamercolor{subitem}{fg=junglegreen}
+%\setbeamercolor{subsubitem}{fg=junebud}
+%\setbeamertemplate{itemize item}{\tikz\draw[fill=darkspringgreen] (0,0) circle (.4ex);}
+%\setbeamertemplate{itemize subitem}{\tikz\draw[fill=junglegreen] (0,0) circle (.5ex);}
+%\setbeamertemplate{itemize subsubitem}{\tikz\draw[fill=junebud] (0,0) circle (.5ex);}
+\setbeamertemplate{itemize item}{\vspace{4cm}\includegraphics[scale=0.02]{style/bullet.jpeg}}
+\setbeamertemplate{itemize subitem}{\vspace{4cm}\includegraphics[scale=0.013]{style/bullet.jpeg}}
+\setbeamertemplate{itemize subsubitem}{\includegraphics[scale=0.012]{style/bullet.jpeg}}
+
+
+% Change the colours of the background theme
+\setbeamercolor*{structure}{bg=cobalt!20,fg=cobalt}
+\setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.fg}
+\setbeamercolor*{palette secondary}{use=structure,fg=white,bg=structure.fg!75}
+\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=structure.fg!50!black}
+\setbeamercolor*{palette quaternary}{fg=white,bg=black}
+\setbeamercolor{section in toc}{fg=black,bg=white}
+\setbeamercolor{alerted text}{use=structure,fg=structure.fg!50!black!80!black}
+\setbeamercolor{titlelike}{parent=palette primary,fg=structure.fg!50!black}
+\setbeamercolor{frametitle}{bg=gray!10!white,fg=davygrey}
+\setbeamercolor*{titlelike}{parent=palette primary}
