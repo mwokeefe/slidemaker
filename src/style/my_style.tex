@@ -35,7 +35,6 @@
 \setbeamertemplate{itemize subitem}{\vspace{4cm}\includegraphics[scale=0.013]{style/bullet.jpeg}}
 \setbeamertemplate{itemize subsubitem}{\includegraphics[scale=0.012]{style/bullet.jpeg}}
 
-
 % Change the colours of the background theme
 \setbeamercolor*{structure}{bg=cobalt!20,fg=cobalt}
 \setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.fg!75}
@@ -47,3 +46,10 @@
 \setbeamercolor{titlelike}{parent=palette primary,fg=structure.fg!50!black}
 \setbeamercolor{frametitle}{bg=gray!10!white,fg=davygrey}
 \setbeamercolor*{titlelike}{parent=palette primary}
+
+% Add uni/ATLAS logo
+\titlegraphic{
+    \includegraphics[width=0.2\textwidth,height=0.1\textwidth]{style/ATLAS.png}
+    \hspace{5cm}
+    \includegraphics[width=0.22\textwidth,height=0.06\textwidth]{style/uni.png}
+}
