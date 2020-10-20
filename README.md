@@ -25,10 +25,8 @@ In compile.sh there are various variables to be set:
 
     - DATE   = date in year_day_month format (used to date the pdf filename)
     - TAG    = a memorable tag for the pdf filename
-    - title  = title to appear in slides
-    - author = author to appear in slides
-    - date   = date to appear in slides
 
+The title, author and date are set directly in the .md file (in the yaml header at the top).
 There is an scp command in compile.sh, used to copy files from a remote host. 
 Change the ssh accordingly and simply provide an argument (can be literally anything, the if statement checks if the number of arguments given is non-zero) when running compile.sh.
 If copying from a local directory just add a regular cp command inside the if statement, assuming you don't want to copy the files every time the slides are compiled. 

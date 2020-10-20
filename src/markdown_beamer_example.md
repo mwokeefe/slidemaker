@@ -20,3 +20,7 @@ colortheme: "beaver"
     - Meaning you can't nicely flick between slides
 - To set the alignment to the top of the slide, simply add ```{.t}``` to the slide title
 
+## Third Slide
+1. This is
+1. How you
+1. Do a list!

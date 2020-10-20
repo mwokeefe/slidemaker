@@ -25,15 +25,11 @@
 \setbeamercolor{itemize/enumerate subsubbody}{fg=steelblue}
 
 % Set list bullet colours
-%\setbeamercolor{item}{fg=darkspringgreen}
-%\setbeamercolor{subitem}{fg=junglegreen}
-%\setbeamercolor{subsubitem}{fg=junebud}
-%\setbeamertemplate{itemize item}{\tikz\draw[fill=darkspringgreen] (0,0) circle (.4ex);}
-%\setbeamertemplate{itemize subitem}{\tikz\draw[fill=junglegreen] (0,0) circle (.5ex);}
-%\setbeamertemplate{itemize subsubitem}{\tikz\draw[fill=junebud] (0,0) circle (.5ex);}
-\setbeamertemplate{itemize item}{\vspace{4cm}\includegraphics[scale=0.02]{style/bullet.jpeg}}
-\setbeamertemplate{itemize subitem}{\vspace{4cm}\includegraphics[scale=0.013]{style/bullet.jpeg}}
-\setbeamertemplate{itemize subsubitem}{\includegraphics[scale=0.012]{style/bullet.jpeg}}
+\setbeamertemplate{itemize item}{$\vcenter{\hbox{\includegraphics[scale=0.02]{style/bullet.jpeg}}}$}
+\setbeamertemplate{itemize subitem}{$\vcenter{\hbox{\includegraphics[scale=0.013]{style/bullet.jpeg}}}$}
+\setbeamertemplate{itemize subsubitem}{$\vcenter{\hbox{\includegraphics[scale=0.012]{style/bullet.jpeg}}}$}
+
+%\setbeamertemplate{enumerate items}{\scriptsize $\vcenter{\hbox{\includegraphics[scale=0.017]{style/bullet_enum.jpg}}}$ \hspace{-0.52cm} \insertenumlabel \hspace{0.1cm}}
 
 % Change the colours of the background theme
 \setbeamercolor*{structure}{bg=cobalt!20,fg=cobalt}
@@ -53,4 +49,4 @@
     \hspace{5cm}
     \includegraphics[width=0.22\textwidth,height=0.06\textwidth]{style/uni.png}
 }
-\institute{University of Liverpool}
+\institute[]{University of Liverpool}
