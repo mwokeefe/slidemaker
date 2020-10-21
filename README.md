@@ -10,6 +10,7 @@ function makeslides(){
     local out=$1
     cp -r ~/Work/Presentations/slidemaker/src/ $out
     cd $out
+    sed -i "s/date:.*/date: $(date +'%d %B %Y')/" markdown_beamer_example.md
 }
 ```
 changing the path to slidemaker accordingly. To initialise a new folder: 
