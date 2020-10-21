@@ -1,15 +1,10 @@
-% Include packages
+% Include commonly used packages
 \usepackage{braket}
 \usepackage{listings}
 \usepackage{tabto}
 \usepackage{tikz}
 
 % Define colours
-\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
-\definecolor{alizarin}{rgb}{0.82, 0.1, 0.26}
-\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}
-\definecolor{junglegreen}{rgb}{0.16, 0.67, 0.53}
-\definecolor{junebud}{rgb}{0.74, 0.85, 0.34}
 \definecolor{cobalt}{rgb}{0.0, 0.28, 0.67}
 \definecolor{darkblue}{rgb}{0.0, 0.0, 0.55}
 \definecolor{davygrey}{rgb}{0.33, 0.33, 0.33}
@@ -28,8 +23,6 @@
 \setbeamertemplate{itemize item}{$\vcenter{\hbox{\includegraphics[scale=0.02]{style/bullet.jpeg}}}$}
 \setbeamertemplate{itemize subitem}{$\vcenter{\hbox{\includegraphics[scale=0.013]{style/bullet.jpeg}}}$}
 \setbeamertemplate{itemize subsubitem}{$\vcenter{\hbox{\includegraphics[scale=0.012]{style/bullet.jpeg}}}$}
-
-%\setbeamertemplate{enumerate items}{\scriptsize $\vcenter{\hbox{\includegraphics[scale=0.017]{style/bullet_enum.jpg}}}$ \hspace{-0.52cm} \insertenumlabel \hspace{0.1cm}}
 
 % Change the colours of the background theme
 \setbeamercolor*{structure}{bg=cobalt!20,fg=cobalt}
@@ -65,17 +58,17 @@
 \makeatother
 \setbeamertemplate{footline}
 {
-  \leavevmode%
-  \hbox{%
-  \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
-    \usebeamerfont{author in head/foot}\insertshortauthor
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
-    \usebeamerfont{title in head/foot}\insertinstitute %\insertshorttitle
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
-    \insertdate \hspace*{8ex} \insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
-  \end{beamercolorbox}}%
-  \vskip0pt%
+    \leavevmode%
+    \hbox{%
+        \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+            \usebeamerfont{author in head/foot}\insertshortauthor
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+            \usebeamerfont{title in head/foot}\insertinstitute %\insertshorttitle
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+            \insertdate \hspace*{8ex} \insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
+        \end{beamercolorbox}}%
+    \vskip0pt%
 }
 \makeatletter
