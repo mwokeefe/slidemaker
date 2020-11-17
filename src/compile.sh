@@ -11,4 +11,4 @@ then
     rsync mokeefe@gateway.ph.liv.ac.uk:"" images/
 fi
 
-pandoc markdown_beamer_example.md -t beamer -o ${DATE}_${TAG}.pdf --slide-level 2 --include-in-header style/my_style.tex --variable urlcolor=cyan
+pandoc markdown_beamer_example.md -t beamer -o ${DATE}_${TAG}.pdf --slide-level 2 --include-in-header style/my_style.tex --variable urlcolor=cyan --variable linkcolor=white
