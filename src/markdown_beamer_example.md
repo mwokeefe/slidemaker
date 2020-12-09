@@ -24,3 +24,19 @@ colortheme: "beaver"
 1. This is
 1. How you
 1. Do a list!
+
+## Fourth slide
+::: columns
+
+:::: column
+- This is my first column
+- This is my first column
+::::
+
+:::: column
+- This is my second column
+- This is my second column
+::::
+
+:::
+
