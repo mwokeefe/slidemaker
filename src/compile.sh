@@ -9,6 +9,8 @@ if [ $# -ne 0 ]
 then
     sshpass -p $(pass lxplus) rsync miokeefe@lxplus.cern.ch:"/eos/user/m/miokeefe/ZcountingPlots/FullRun2/*all*.pdf" images/
     #rsync mokeefe@gateway.ph.liv.ac.uk:"" images/
+    notify-send -i ./style/tick.png "SlideMaker" "Images downloaded. Compiling..."
 fi
 
 pandoc markdown_beamer_example.md -t beamer -o ${DATE}_${TAG}.pdf --slide-level 2 --include-in-header style/my_style.tex --variable urlcolor=steelblue --variable linkcolor=white
+notify-send -i ./style/tick.png "SlideMaker" "Slides compiled!"
