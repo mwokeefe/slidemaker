@@ -25,6 +25,9 @@ colortheme: "beaver"
 1. How you
 1. Do a list!
 
+## This slide has figures
+![](./style/ATLAS.png){ width=49% }
+
 ## Fourth slide
 ::: columns
 
