@@ -21,9 +21,12 @@
 \setbeamercolor{itemize/enumerate subsubbody}{fg=steelblue}
 
 % Set list bullet colours
-\setbeamertemplate{itemize item}{$\vcenter{\hbox{\includegraphics[scale=0.02]{style/bullet.jpeg}}}$}
-\setbeamertemplate{itemize subitem}{$\vcenter{\hbox{\includegraphics[scale=0.013]{style/bullet.jpeg}}}$}
-\setbeamertemplate{itemize subsubitem}{$\vcenter{\hbox{\includegraphics[scale=0.012]{style/bullet.jpeg}}}$}
+\defbeamertemplate{itemize item}{image}{\small\includegraphics[height=1.6ex]{./style/bullet.jpeg}}
+\defbeamertemplate{itemize subitem}{image}{\scriptsize\includegraphics[height=1.6ex]{./style/bullet.jpeg}}
+\defbeamertemplate{itemize subsubitem}{image}{\tiny\includegraphics[height=1.6ex]{./style/bullet.jpeg}}
+\setbeamertemplate{itemize item}[image]
+\setbeamertemplate{itemize subitem}[image]
+\setbeamertemplate{itemize subsubitem}[image]
 
 % Change the colours of the background theme
 \setbeamercolor*{structure}{bg=cobalt!20,fg=cobalt}
