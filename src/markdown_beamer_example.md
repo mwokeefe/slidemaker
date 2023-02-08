@@ -1,6 +1,6 @@
 ---
 title: Example Title
-author: Michael O'Keefe
+author: The Strategic Research Group 
 date: XXnd October 2020
 output: 
 beamer_presentation:
@@ -26,7 +26,7 @@ colortheme: "beaver"
 1. Do a list!
 
 ## This slide has figures
-![](./style/ATLAS.png){ width=49% }
+![](./style/raytheon.png){ width=49% }
 
 ## Fourth slide
 ::: columns

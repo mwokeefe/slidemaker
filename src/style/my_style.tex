@@ -21,32 +21,32 @@
 \setbeamercolor{itemize/enumerate subsubbody}{fg=steelblue}
 
 % Set list bullet colours
-\defbeamertemplate{itemize item}{image}{\small\includegraphics[height=1.6ex]{./style/bullet.jpeg}}
-\defbeamertemplate{itemize subitem}{image}{\scriptsize\includegraphics[height=1.6ex]{./style/bullet.jpeg}}
-\defbeamertemplate{itemize subsubitem}{image}{\tiny\includegraphics[height=1.6ex]{./style/bullet.jpeg}}
 \setbeamertemplate{itemize item}[image]
 \setbeamertemplate{itemize subitem}[image]
 \setbeamertemplate{itemize subsubitem}[image]
 
 % Change the colours of the background theme
-\setbeamercolor*{structure}{bg=cobalt!20,fg=cobalt}
-\setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.fg!75}
-\setbeamercolor*{palette secondary}{use=structure,fg=white,bg=structure.fg!50}
-\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=structure.fg!75}
+%\setbeamercolor*{structure}{bg=cobalt!20,fg=cobalt}
+\setbeamercolor*{structure}{bg=red,fg=white}
+\setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.bg}
+\setbeamercolor*{palette secondary}{use=structure,fg=white,bg=structure.bg}
+\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=structure.bg}
 \setbeamercolor*{palette quaternary}{fg=white,bg=black}
 \setbeamercolor{section in toc}{fg=black,bg=white}
 \setbeamercolor{alerted text}{use=structure,fg=structure.fg!50!black!80!black}
 \setbeamercolor{titlelike}{parent=palette primary,fg=structure.fg!50!black}
-\setbeamercolor{frametitle}{bg=gray!10!white,fg=davygrey}
+
+% Frame title style
+\setbeamertemplate{frametitle}{
+    \color{black}\bfseries\insertframetitle
+}
+\setbeamercolor{frametitle}{bg=white,fg=black}
 \setbeamercolor*{titlelike}{parent=palette primary}
 
 % Add uni/ATLAS logo
 \titlegraphic{
-    \includegraphics[width=0.2\textwidth,height=0.1\textwidth]{style/ATLAS.png}
-    \hspace{5cm}
-    \includegraphics[width=0.22\textwidth,height=0.06\textwidth]{style/uni.png}
+    \includegraphics[width=0.2\textwidth,height=0.1\textwidth]{style/raytheon.png}
 }
-\institute[]{University of Liverpool}
 
 % Remove section number from section title pages
 \setbeamertemplate{section page}
@@ -59,23 +59,32 @@
 }
 
 % Customise footline (same can be done for headline)
+\setbeamercolor{footlinecolor}{fg=white,bg=white}
 \makeatother
 \setbeamertemplate{footline}
 {
-    \leavevmode%
-    \hbox{%
-        \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
-            \usebeamerfont{author in head/foot}\insertshortauthor
-        \end{beamercolorbox}%
-        \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
-            \usebeamerfont{title in head/foot}\insertinstitute %\insertshorttitle
-        \end{beamercolorbox}%
-        \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
-            \insertdate \hspace*{8ex} \insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
-        \end{beamercolorbox}}%
-    \vskip0pt%
+    \ifnum \theframenumber=1
+
+    \else
+        \leavevmode%
+        \hbox{%
+            \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,center]{footlinecolor}
+                \includegraphics[width=0.2\textwidth,height=0.1\textwidth]{style/raytheon.png}
+            \end{beamercolorbox}%
+            \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,center]{footlinecolor}
+                \usebeamerfont{title in head/foot}{\color{trolleygrey}\tiny \scalebox{0.6}{
+                     \begin{tabular}{@{}c@{}}
+                    WARNING: Undetermined Jurisdiction Classification - Export Prohibited\\ Unrestricted Content
+                     \end{tabular}
+                }}
+            \end{beamercolorbox}%
+            \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,right]{footlinecolor}
+                {\color{trolleygrey} \insertframenumber{} / \inserttotalframenumber\hspace*{1ex}}
+            \end{beamercolorbox}}%
+        \vskip0pt%
+    \fi
 }
 \makeatletter
 
 % Turn off coloured bar at the top
-\setbeamertemplate{headline}{}
+%\setbeamertemplate{headline}{}
