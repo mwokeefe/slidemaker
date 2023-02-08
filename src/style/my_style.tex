@@ -11,6 +11,7 @@
 \definecolor{davygrey}{rgb}{0.33, 0.33, 0.33}
 \definecolor{trolleygrey}{rgb}{0.5, 0.5, 0.5}
 \definecolor{steelblue}{rgb}{0.27, 0.51, 0.71}
+\definecolor{rayred}{rgb}{0.90196,0.07059,0.19216}
 
 % Set list text size/colours
 \setbeamertemplate{itemize/enumerate body begin}{}
@@ -18,7 +19,7 @@
 \setbeamertemplate{itemize/enumerate subsubbody begin}{\fontsize{8}{11}\selectfont}
 \setbeamercolor{itemize/enumerate body}{fg=black}
 \setbeamercolor{itemize/enumerate subbody}{fg=trolleygrey}
-\setbeamercolor{itemize/enumerate subsubbody}{fg=steelblue}
+\setbeamercolor{itemize/enumerate subsubbody}{fg=trolleygrey}
 
 % Set list bullet colours
 \setbeamertemplate{itemize item}[image]
@@ -27,7 +28,7 @@
 
 % Change the colours of the background theme
 %\setbeamercolor*{structure}{bg=cobalt!20,fg=cobalt}
-\setbeamercolor*{structure}{bg=red,fg=white}
+\setbeamercolor*{structure}{bg=rayred,fg=white}
 \setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.bg}
 \setbeamercolor*{palette secondary}{use=structure,fg=white,bg=structure.bg}
 \setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=structure.bg}
@@ -45,7 +46,7 @@
 
 % Add uni/ATLAS logo
 \titlegraphic{
-    \includegraphics[width=0.2\textwidth,height=0.1\textwidth]{style/raytheon.png}
+    \includegraphics[width=\textwidth,height=0.5\textwidth]{style/raytheon_tech.png}
 }
 
 % Remove section number from section title pages
@@ -64,11 +65,32 @@
 \setbeamertemplate{footline}
 {
     \ifnum \theframenumber=1
+        \leavevmode%
+        \hbox{%
+            \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,left]{footlinecolor}
+                \hspace{2ex}
+                \usebeamerfont{title in head/foot}{\color{trolleygrey}\tiny \scalebox{0.6}{
+                     \begin{tabular}{@{}c@{}}
+                        \copyright 2022 Raytheon Technologies Corporation \\ All rights reserved.
+                     \end{tabular}
+                }}
+            \end{beamercolorbox}%
+            \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,center]{footlinecolor}
+                \usebeamerfont{title in head/foot}{\color{trolleygrey}\tiny \scalebox{0.6}{
+                     \begin{tabular}{@{}c@{}}
+                    WARNING: Undetermined Jurisdiction Classification - Export Prohibited\\ Unrestricted Content
+                     \end{tabular}
+                }}
+            \end{beamercolorbox}%
+            \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,right]{footlinecolor}
+            \end{beamercolorbox}}%
+        \vskip0pt%
 
     \else
         \leavevmode%
         \hbox{%
-            \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,center]{footlinecolor}
+            \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,left]{footlinecolor}
+                \hspace{2ex}
                 \includegraphics[width=0.2\textwidth,height=0.1\textwidth]{style/raytheon.png}
             \end{beamercolorbox}%
             \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,center]{footlinecolor}
@@ -88,3 +110,22 @@
 
 % Turn off coloured bar at the top
 %\setbeamertemplate{headline}{}
+
+% Customise titlepage
+\defbeamertemplate*{title page}{customized}[1][]
+{
+
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \usebeamerfont{title}\textbf\inserttitle\par
+            \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+            \bigskip
+            \usebeamerfont{author}\insertauthor\par
+            \usebeamerfont{date}\insertdate\par
+        \end{column}
+    \end{columns}
+}
