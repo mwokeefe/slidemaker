@@ -4,7 +4,7 @@ title:
 author: 
   - The Strategic Research Group 
 date: 
-  - XXnd October 2020
+  - 09/02/2022
 output: 
 beamer_presentation:
 slide_level: 2
